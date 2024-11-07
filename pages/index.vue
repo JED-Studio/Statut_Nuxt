@@ -98,7 +98,10 @@
 
     </header>
 
-    <section class="statut_nuxt__section">
+
+
+
+    <section class="statut_nuxt__stocks">
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__grid">
                 <img src="/public/image/Group 1014.png" alt="">
@@ -110,6 +113,103 @@
     </section>
 
 
+    
+
+
+    <section class="statut_nuxt__products">
+        <div class="statut_nuxt__container">
+            <div class="statut_nuxt__goods">
+             <div>
+                <h2>Новые поступления</h2>
+                <div><</div>
+                <div>></div>
+             </div>
+
+             <div class="statut_nuxt__card">
+
+                <div class="statut_nuxt__card-item">
+                    <img src="/public/image/image 142.png" alt="">
+                    
+                    <span>Договорное право</span>
+                    <span>Договор коммерческой концессии (франчайзинг). Граж...</span>
+                    <span>Багдасарян А.Ф.</span>
+                    <span>372 ₽ </span>
+                    <div class="statut_nuxt__evaluations">
+                        <div class="statut_nuxt__star">4.9</div>
+                        <div class="statut_nuxt__recomend">89% рекомендуют</div>
+                    </div>
+                    <div class="statut_nuxt__buttons-item">
+                        <div class="statut_nuxt__basket">
+                            <img src="" alt="">
+                            <span>В корзина</span>
+                        </div>
+                        <div class="statut_nuxt__selected">
+                            <img src="/assets/icons/icon7.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="statut_nuxt__card-item">
+                    <img src="/public/image/image 142.png" alt="">
+                    <span>Договорное право</span>
+                    <span>Договор коммерческой концессии (франчайзинг). Граж...</span>
+                    <span>Багдасарян А.Ф.</span>
+                    <span>372 ₽ </span>
+                    <div>
+                        <div>4.9</div>
+                        <div>89% рекомендуют</div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                            <span>В корзина</span>
+                        </div>
+                        <div><img src="" alt=""></div>
+                    </div>
+                </div>
+                <div class="statut_nuxt__card-item">
+                    <img src="/public/image/image 142.png" alt="">
+                    <span>Договорное право</span>
+                    <span>Договор коммерческой концессии (франчайзинг). Граж...</span>
+                    <span>Багдасарян А.Ф.</span>
+                    <span>372 ₽ </span>
+                    <div>
+                        <div>4.9</div>
+                        <div>89% рекомендуют</div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                            <span>В корзина</span>
+                        </div>
+                        <div><img src="" alt=""></div>
+                    </div>
+                </div>
+                <div class="statut_nuxt__card-item">
+                    <img src="/public/image/image 142.png" alt="">
+                    <span>Договорное право</span>
+                    <span>Договор коммерческой концессии (франчайзинг). Граж...</span>
+                    <span>Багдасарян А.Ф.</span>
+                    <span>372 ₽ </span>
+                    <div>
+                        <div>4.9</div>
+                        <div>89% рекомендуют</div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                            <span>В корзина</span>
+                        </div>
+                        <div><img src="" alt=""></div>
+                    </div>
+                </div>
+                
+
+             </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
@@ -224,9 +324,9 @@
     cursor: pointer;
 }
 
-/*section */
+/*section stocks */
 
-.statut_nuxt__section{
+.statut_nuxt__stocks{
     padding-top: 30px;
     background-color: rgba(249, 249, 250, 1);
 }
@@ -245,5 +345,58 @@
 .statut_nuxt__rectangle1{
     grid-row-start: 1;
     grid-column-start: 3;
+}
+
+/*section products2 */
+.statut_nuxt__products{
+    background-color: rgba(249, 249, 250, 1);
+}
+
+.statut_nuxt__card{
+    display: flex;
+    
+}
+
+.statut_nuxt__card-item{
+    border: 1px solid gray;
+    
+}
+
+.statut_nuxt__evaluations{
+    display: flex;
+    gap: 10px;
+}
+
+.statut_nuxt__star{
+    display: flex;
+    border-radius: 5px;
+    background-color: #fff1e4;
+    padding: 5px 8px;
+}
+
+.statut_nuxt__recomend{
+    display: flex;
+    background-color: #dee0ea;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.statut_nuxt__buttons-item{
+    display: flex;
+    gap: 10px;
+}
+
+.statut_nuxt__basket{
+    display: flex;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 2px solid #eeeeee;
+}
+
+.statut_nuxt__selected{
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #eeeeee;
 }
 </style>
