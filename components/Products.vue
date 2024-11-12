@@ -133,6 +133,7 @@ return {
 <style>
 .statut_nuxt__products{
     background-color: rgba(249, 249, 250, 1);
+    padding-bottom: 30px;
 }
 
 .statut_nuxt__goods{

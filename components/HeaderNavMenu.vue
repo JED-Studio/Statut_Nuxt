@@ -10,7 +10,7 @@
                 <a href="">Новинки</a>
                 <div class="statut_nuxt__discount">
                     <img src="/assets/icons/icon11.svg" alt="">
-                    <a href="">Скидки</a>
+                    <a  href="">Скидки</a>
                 </div>
                 <a href="">Партнёрам</a>
                 <a href="">Мы</a>
@@ -38,6 +38,10 @@
     align-items: center;
     gap: 5px;
     cursor: pointer;
+}
+
+.statut_nuxt__discount > a {
+    color: rgba(255, 40, 61, 1);
 }
 
 a{

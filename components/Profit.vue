@@ -42,6 +42,7 @@
 <style>
 .statut_nuxt__profit{
     background-color: rgba(249, 249, 250, 1);
+    padding-bottom: 30px;
 }
 
 
@@ -49,6 +50,7 @@
     display: flex;
     justify-content: space-between;
     gap:30px
+
 }
 
 .statut_nuxt__profit-item{

@@ -6,11 +6,9 @@
                 <div class="statut_nuxt__logo-search">
                     
                         <img src="/public/image/logo.png" alt="">
-                    
-    
-                    <div class="statut_nuxt__search">
-                        <input type="text" placeholder="Поиск по сайту">
-                    </div>
+                        
+                        <Form />
+                        
                 </div>
 
                 <div class="statut_nuxt__cart">
@@ -74,4 +72,10 @@ a{
     text-decoration: none;
     color:rgba(28, 41, 77, 1);
 }
+
+
+
+
+
+
 </style>

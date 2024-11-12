@@ -34,8 +34,8 @@ export default defineComponent({
                     </div>
                     <div class="statut_nuxt__buttons-item">
                         <div class="statut_nuxt__basket">
-                            <img src="" alt="">
-                            <span>В корзина</span>
+                            <img src="/assets/icons/icon 1 - 24px.svg" alt="">
+                            <p class="statut_nuxt__basket-text">В корзина</p>
                         </div>
                         <div class="statut_nuxt__selected">
                             <img src="/assets/icons/icon7.svg" alt="">
@@ -137,6 +137,14 @@ export default defineComponent({
     padding: 10px 25px;
     border-radius: 5px;
     border: 2px solid #eeeeee;
+    align-items: center;
+    gap: 10px;
+}
+
+.statut_nuxt__basket-text{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(28, 41, 77, 1);
 }
 
 .statut_nuxt__selected{

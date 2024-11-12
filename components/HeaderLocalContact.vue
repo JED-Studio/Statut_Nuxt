@@ -75,7 +75,7 @@
 
 .statut_nuxt__contact{
     display: flex;
-    gap: 8px;
+    gap: 30px;
 }
 
 .statut_nuxt__contact-item{
