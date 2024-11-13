@@ -3,9 +3,7 @@
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__grid">
                 <div class="statut_nuxt__stock-slider"></div>
-                <div class="statut_nuxt__stock-rectangle"></div>
-                <div class="statut_nuxt__stock-rectangle-2"></div>
-    
+                
 
 
                 <div class="statut_nuxt__stock-card">
@@ -50,6 +48,10 @@
 
 
                 </div>
+
+<div class="statut_nuxt__stock-rectangle"></div>
+                <div class="statut_nuxt__stock-rectangle-2"></div>
+
             </div>
         </div>
     </section>
@@ -206,5 +208,22 @@
     gap: 10px;
 }
 
+@media(max-width: 768px){
+    .statut_nuxt__stocks{padding: 10px 0px;}
+    .statut_nuxt__grid{display: block;}
 
+    .statut_nuxt__stock-slider{margin-bottom: 10px;}
+
+    .statut_nuxt__stock-item{
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+    
+    .statut_nuxt__stock-rectangle{
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .statut_nuxt__stock-rectangle-2{max-width: 100%;}
+}
 </style>

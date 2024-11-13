@@ -70,4 +70,29 @@ input{
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
 }
+
+@media(max-width: 768px){
+    .statut_nuxt__mailing-title{
+        margin-bottom: 10px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .statut_nuxt__mailing-input{
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .statut_nuxt__mailing-block{
+        display: block;
+        height: 190px;
+        padding: 20px 10px;
+    }
+
+    .statut_nuxt__mailing-button{
+        width: 100%;
+        text-align: center;
+    }
+}
 </style>

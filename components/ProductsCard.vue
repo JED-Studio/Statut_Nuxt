@@ -11,7 +11,7 @@ export default defineComponent({
             price: Number,
             star: Number,
             recomend: Number,
-    
+            image: String
     }
 })
 
@@ -21,7 +21,7 @@ export default defineComponent({
 <template>
     <div class="statut_nuxt__card-item" >
                     <div class="statut_nuxt__width">
-                    <img src="/public/image/image 142.png" alt="">
+                    <img v-bind:src="image" alt="">
                     <div class="statut_nuxt__width-text">
                         <p class="statut_nuxt__width-title">{{ title }}</p>
                         <p class="statut_nuxt__width-description">{{ description }}</p>

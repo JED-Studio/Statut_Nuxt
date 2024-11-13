@@ -22,7 +22,7 @@
 <style scoped>
 
 .statut_nuxt__navigation-menu{
-    margin: 20px 0px;
+    padding-bottom: 20px;
 }
 
 .statut_nuxt__flex3{
@@ -49,5 +49,11 @@ a{
     font-size: 14px;
     font-weight: 400;
     color: rgba(28, 41, 77, 1);
+}
+
+@media(max-width: 768px){ 
+    .statut_nuxt__navigation-menu{
+        display: none;
+    }
 }
 </style>

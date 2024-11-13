@@ -1,3 +1,17 @@
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    
+    setup(){
+
+        
+
+
+    }
+})
+</script>
+
 <template>
     <form class="kanspark__form">
                 <div class="kanspark__input">
@@ -21,7 +35,8 @@
     justify-content: space-between;
     border-radius: 5px;
     border: 1px solid rgba(223, 224, 225, 1);
-    width: 573px;
+    width: 100%;
+    max-width: 573px;
     height: 40px;
 }
 
@@ -65,4 +80,10 @@ input::placeholder {
     letter-spacing: 5%;
   }
 
+@media(max-width: 767px){
+    .kanspark__search-button{
+        display: none;
+    }
+
+}
 </style>

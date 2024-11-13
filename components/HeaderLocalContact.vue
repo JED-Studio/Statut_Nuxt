@@ -40,11 +40,6 @@
     border-bottom: 1px solid rgba(223, 224, 225, 1);
 }
 
-.statut_nuxt__container{
-    max-width: 1140px;
-    width: 100%;
-    margin: 0 auto;
-}
 
 
 .statut_nuxt__flex{
@@ -89,5 +84,11 @@
     color: rgba(28, 41, 77, 0.8);
     font-weight: 500;
     font-style: normal;
+}
+
+@media(max-width: 768px){
+       .statut_nuxt__location-contact{
+           display: none;
+       }
 }
 </style>

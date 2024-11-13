@@ -22,8 +22,8 @@ setup(){
             author: 'Майфат А.В.',
             price: 4450,
             star: 4.9,
-            recomend: 89
-
+            recomend: 89,
+            image: new URL('/public/image/image (140).png', import.meta.url).href,
         },
         {
             id: 2,
@@ -32,8 +32,8 @@ setup(){
             author: 'Багдасарян А.Ф.',
             price: 372,
             star: 4.9,
-            recomend: 89
-
+            recomend: 89,
+            image:'/public/image/image 140.png'
         },
         {
             id: 3,
@@ -42,8 +42,8 @@ setup(){
             author: 'Башлаков-Николаев И.В.',
             price: 984,
             star: 4.9,
-            recomend: 89
-
+            recomend: 89,
+            image:'/public/image/image 140.png'
         },
         {
             id: 4,
@@ -52,8 +52,8 @@ setup(){
             author: 'Майфат А.В.',
             price: '450',
             star: 4.9,
-            recomend: 89
-
+            recomend: 89,
+            image:'/public/image/image 140.png'
         },
         {
             id: 5,
@@ -62,8 +62,8 @@ setup(){
             author: 'Майфат А.В.',
             price: '450',
             star: 4.9,
-            recomend: 89
-
+            recomend: 89,
+            image:'/public/image/image 140.png'
         },
         {
             id: 6,
@@ -72,8 +72,8 @@ setup(){
             author: 'Майфат А.В.',
             price: '450',
             star: 4.9,
-            recomend: 89
-
+            recomend: 89,
+            image:'/public/image/image 140.png'
         },
         
 
@@ -113,6 +113,7 @@ return {
                 :price="item.price"
                 :star="item.star"
                 :recomend="item.recomend"
+                :image="item.image"
                 />
                
 

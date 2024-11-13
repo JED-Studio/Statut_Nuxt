@@ -34,7 +34,7 @@
             </div>
 
             <div class="statut_nuxt__footer-bottom">
-                <span>© 2020 Издательство «Статут»</span>
+                <span class="statut_nuxt__footer-bottom-text">© 2020 Издательство «Статут»</span>
                 <span>ул. Лобачевского, 92, корп. 2 119454, г. Москва</span>
                 <span>Политика конфиденциальности</span>
                 <span>Договор оферты</span>
@@ -64,4 +64,19 @@
 .statut_nuxt__footer-bottom{
     padding: 40px 0px 45px 0px
 }
+
+.statut_nuxt__footer-bottom-text{color: rgba(28, 41, 77, 0.5);}
+
+h4{
+    color: rgba(28, 41, 77, 1);
+    font-size: 14px;
+    font-family: 500;
+}
+
+span{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(40, 47, 54, 0.8);
+}
+
 </style>

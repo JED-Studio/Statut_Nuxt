@@ -4,6 +4,7 @@
             <div class="statut_nuxt__flex2">
 
                 <div class="statut_nuxt__logo-search">
+                    <img class="statut_nuxt__sidebar" src="/assets/icons/icon10.svg" alt="">
                     
                         <img src="/public/image/logo.png" alt="">
                         
@@ -20,8 +21,11 @@
                         <img src="/assets/icons/icon8.svg" alt="">
                         <a href="">Войти</a>
                     </div>
-                    <div class="statut_nuxt__cart-item">
+                    <div class="statut_nuxt__cart-item-basket">
+                        <div class="statut_nuxt__cart-basket">
                         <img src="/assets/icons/icon9.svg" alt="">
+                        <div class="statut_nuxt__cart-item-num">10</div>
+                        </div>
                         <a href="">Корзина</a>
                     </div>
                 </div>
@@ -33,7 +37,7 @@
 
 <style scoped>
 .statut_nuxt__logo-search-cart{
-    margin: 20px 0px;
+    padding: 20px 0px;
 }
 
 .statut_nuxt__flex2{
@@ -43,10 +47,13 @@
     height: 40px;
 }
 
+.statut_nuxt__sidebar{display: none;}
+
 .statut_nuxt__logo-search{
     display: flex;
     align-items: center;
     gap: 30px;
+    width: 100%;
 }
 
 .statut_nuxt__search{
@@ -57,13 +64,38 @@
     display: flex;
     align-items: center;
     gap: 30px;
-
+    padding-left: 10px;
 }
 
 .statut_nuxt__cart-item{
     display: flex;
     align-items: center;
     gap: 5px;
+}
+.statut_nuxt__cart-item-basket{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.statut_nuxt__cart-basket{position: relative;}
+
+.statut_nuxt__cart-item-num{
+    padding: 2px;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 500;
+    width: 15px;
+    height: 15px;
+    line-height: 20px;
+    background-color: rgba(255, 122, 0, 1);
+    color: white;
+   
 }
 
 a{
@@ -75,7 +107,23 @@ a{
 
 
 
+@media (max-width: 768px) {
+    .statut_nuxt__cart{
+        
+    }
 
+    .statut_nuxt__logo-search-cart{
+        padding: 15px 0px;
+        border: 1px solid rgba(236, 236, 236, 1);
+    }
+
+    .statut_nuxt__sidebar{display: block;}
+
+    .statut_nuxt__cart-item{display: none;}
+
+    a{display: none;}
+
+}
 
 
 </style>
