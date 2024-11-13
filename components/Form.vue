@@ -5,7 +5,8 @@
                 </div>
 
                 <button class="kanspark__search-button">
-                    <img src="" alt="Поиск">
+                    <img src="/assets/icons/Interface 52 - 24px.svg" alt="Поиск">
+                    <span>Искать</span>
                 </button>
             </form>
 </template>
@@ -29,12 +30,22 @@
 }
 
 .kanspark__search-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     border: 1px solid rgba(255, 122, 0, 1);
     background-color: rgba(255, 122, 0, 1);
     height: calc(100% + 2px);
     border-radius: 0px 5px 5px 0px;
     margin: -1px -2px -1px 0;
-    width: 56px;
+    width: 123px;
+}
+
+span{
+    font-size: 14px;
+    font-weight: 500;
+    color: white;  
 }
 
 input{

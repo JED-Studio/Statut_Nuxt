@@ -68,6 +68,7 @@
     height: 350px;
     background-color: greenyellow;
     grid-column: 1 / 3;
+    border-radius: 5px;
 }
 
 .statut_nuxt__grid{
@@ -86,6 +87,7 @@
     max-width: 360px;
     height: 140px;
     background-color: rgb(73, 1, 70);
+    border-radius: 5px;
 }
 
 .statut_nuxt__stock-rectangle-2{
@@ -94,11 +96,13 @@
     max-width: 360px;
     height: 140px;
     background-color: rgb(73, 1, 70);
+    border-radius: 5px;
 }
 
 .statut_nuxt__stock-card{
     grid-row-start: 1;
     grid-column-start: 3;
+    
 }
 
 
@@ -119,6 +123,7 @@
     width: 100%;
     max-width: 360px;
     height: 520px;
+    border-radius: 5px;
 }
 
 .statut_nuxt__stock-width{

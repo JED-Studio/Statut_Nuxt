@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       styles: ['normal', 'italic'],
      
     },
+  },
+
+  app: {
+    baseURL: '/Statut_Nuxt', 
+    buildAssetsDir: 'assets', 
   }
   
 })

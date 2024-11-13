@@ -96,8 +96,8 @@ return {
              <div class="statut_nuxt__receipts">
                 <span class="statut_nuxt__receipts-text">Новые поступления</span>
                 <div class="statut_nuxt__switching">
-                    <button class="statut_nuxt__left"><img src="/assets/icons/Chevron Right 1 - 24px.svg" alt=""></button>
-                    <button class="statut_nuxt__right"><img src="/assets/icons/Chevron Right 1 - 24px.svg" alt=""></button>
+                    <div class="statut_nuxt__left"><img src="/assets/icons/Chevron Right 1 - 24px.svg" alt=""></div>
+                    <div class="statut_nuxt__right"><img class="statut_nuxt__right-img" src="/assets/icons/Chevron Right 1 - 24px.svg" alt=""></div>
                 </div>
              </div>
 
@@ -165,25 +165,32 @@ return {
 }
 
 .statut_nuxt__left{
+    border-right: 1px solid #dddfe4;
     padding: 10px;
     display: flex;
     align-items: center;
-    border: none;
-    background: none;
+
+
 }
 
 .statut_nuxt__right{
     padding: 10px;
     display: flex;
     align-items: center;
-    border: none;
-    background: none;
+   
 }
 
+.statut_nuxt__right-img{
+    transform: rotate(180deg);
+}
 .statut_nuxt__card{
     width: 100%;
     display: flex;
     overflow-x: auto;
+}
+
+.statut_nuxt__card::-webkit-scrollbar{
+    display: none;
 }
 
 .statut_nuxt__all-sections{
@@ -199,11 +206,6 @@ return {
     color: rgba(28, 41, 77, 1);
 }
 
-.statut_nuxt__card-item{
-    padding: 20px 34px 21px 34px;
-    border: 1px solid rgba(28, 41, 77, 0.15);
-    width: 100%;
-}
 
 
 

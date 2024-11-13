@@ -48,9 +48,20 @@ export default defineComponent({
 <style>
 .statut_nuxt__card-item{
     padding: 20px 34px 21px 34px;
-    border: 1px solid rgba(28, 41, 77, 0.15);
+  
     width: 100%;
 }
+
+.statut_nuxt__card-item:nth-child(n+1){
+    border-top: 1px solid rgba(28, 41, 77, 0.15);
+    border-bottom: 1px solid rgba(28, 41, 77, 0.15);
+    border-left: 1px solid rgba(28, 41, 77, 0.15);
+}
+
+.statut_nuxt__card-item:nth-child(1){
+    border-left: none;
+}
+
 
 .statut_nuxt__width{
     width: 223px;
