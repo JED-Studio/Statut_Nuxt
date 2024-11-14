@@ -132,24 +132,31 @@ export default defineComponent({
               
                 
                 
-                <div class="">
-                    <h4>Телефон и Email</h4>
-                    <div>
+                <div class="statut_nuxt__footer-contact">
+                    <h4 class="statut_nuxt__footer-contact-title">Телефон и Email</h4>
+                    <div class="statut_nuxt__footer-contact-flex">
+                    <div class="statut_nuxt__footer-contact-mail">
                         <img src="/assets/icons/Communication 1 - 24px.svg" alt="">
-                        <a>market@estatut.ru</a>
+                        <a class="statut_nuxt__footer-a">market@estatut.ru</a>
                     </div>
-                    <div>
+                    <div class="statut_nuxt__footer-contact-mail">
                         <img src="/assets/icons/Device 32 - 24px.svg" alt="">
-                        <a>8 (968) 660-65-50</a>
+                        <a class="statut_nuxt__footer-a">8 (968) 660-65-50</a>
+                        <img src="/assets/icons/icon6.svg" alt="">
                     </div>
+                </div>
                 </div>
             </div>
 
             <div class="statut_nuxt__footer-bottom">
+                <div class="statut_nuxt__footer-bottom-">
                 <div class="statut_nuxt__footer-bottom-text">© 2020 Издательство «Статут»</div>
-                <div>ул. Лобачевского, 92, корп. 2 119454, г. Москва</div>
-                <div>Политика конфиденциальности</div>
-                <div>Договор оферты</div>
+                <div class="statut_nuxt__footer-bottom-adress">ул. Лобачевского, 92, корп. 2 119454, г. Москва</div>
+            </div>
+            <div class="">
+                <div class="statut_nuxt__footer-bottom-policy">Политика конфиденциальности</div>
+                <div class="statut_nuxt__footer-bottom-offer">Договор оферты</div>
+            </div>
             </div>
 
         </div>
@@ -180,7 +187,20 @@ export default defineComponent({
     width: 165px;
 }
 
-img{
+.statut_nuxt__footer-contact-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.statut_nuxt__footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 165px;
+}
+
+.statut_nuxt__footer-item-image{
     display: none;
 }
 
@@ -205,6 +225,10 @@ h4{
     font-family: 500;
 }
 
+.statut_nuxt__footer-a{
+    color: rgba(28, 41, 77, 0.8);
+}
+
 a{
     font-weight: 400;
     font-size: 14px;
@@ -212,12 +236,54 @@ a{
     text-decoration: none;
 }
 
+.statut_nuxt__footer-contact-mail{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.statut_nuxt__footer-bottom{
+    display: flex;
+    align-items: center;
+}
+
+.statut_nuxt__footer-bottom-adress,
+.statut_nuxt__footer-bottom-policy,
+.statut_nuxt__footer-bottom-offer{
+    font-size:14px;
+    font-weight: 400;
+}
+
+.statut_nuxt__footer-bottom-text{
+    margin-right: 208px;
+}
+
+
 
 @media(max-width: 767px){
     .statut_nuxt__footer-flex{
         flex-direction: column;
         gap: 0;
     }
+    
+    .statut_nuxt__footer-contact-title{
+        display: none;
+    }
+.statut_nuxt__footer-contact-mail{
+    border-bottom: 1px solid rgba(42, 61, 72, 0.15);
+    padding: 20px 0px;
+    
+}
+
+
+.statut_nuxt__footer-contact-flex{
+    display: block;
+}
+
+.statut_nuxt__footer-contact{
+    width: 100%;
+    display: block;
+}
     
     .statut_nuxt__footer-item{
        
@@ -227,6 +293,10 @@ a{
         transition: height 0.5s;
         border-bottom: 1px solid rgba(42, 61, 72, 0.15);
         width: 100%;
+    }
+
+    .statut_nuxt__footer-item-image{
+        display: block;
     }
 
     .statut_nuxt__footer-item-flex{
