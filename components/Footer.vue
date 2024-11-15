@@ -131,33 +131,12 @@ export default defineComponent({
                 </div>
               
                 
-                
-                <div class="statut_nuxt__footer-contact">
-                    <h4 class="statut_nuxt__footer-contact-title">Телефон и Email</h4>
-                    <div class="statut_nuxt__footer-contact-flex">
-                    <div class="statut_nuxt__footer-contact-mail">
-                        <img src="/assets/icons/Communication 1 - 24px.svg" alt="">
-                        <a class="statut_nuxt__footer-a">market@estatut.ru</a>
-                    </div>
-                    <div class="statut_nuxt__footer-contact-mail">
-                        <img src="/assets/icons/Device 32 - 24px.svg" alt="">
-                        <a class="statut_nuxt__footer-a">8 (968) 660-65-50</a>
-                        <img src="/assets/icons/icon6.svg" alt="">
-                    </div>
-                </div>
-                </div>
+               <FooterMedium />
+               
             </div>
 
-            <div class="statut_nuxt__footer-bottom">
-                <div class="statut_nuxt__footer-bottom-">
-                <div class="statut_nuxt__footer-bottom-text">© 2020 Издательство «Статут»</div>
-                <div class="statut_nuxt__footer-bottom-adress">ул. Лобачевского, 92, корп. 2 119454, г. Москва</div>
-            </div>
-            <div class="">
-                <div class="statut_nuxt__footer-bottom-policy">Политика конфиденциальности</div>
-                <div class="statut_nuxt__footer-bottom-offer">Договор оферты</div>
-            </div>
-            </div>
+
+            <FooterBottom />
 
         </div>
     </div>
@@ -180,6 +159,7 @@ export default defineComponent({
     
 }
 
+
 .statut_nuxt__footer-item{
     display: flex;
     flex-direction: column;
@@ -187,18 +167,8 @@ export default defineComponent({
     width: 165px;
 }
 
-.statut_nuxt__footer-contact-flex{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.statut_nuxt__footer-contact{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 165px;
-}
+
 
 .statut_nuxt__footer-item-image{
     display: none;
@@ -213,11 +183,9 @@ li{
     list-style: none;
 }
 
-.statut_nuxt__footer-bottom{
-    padding: 40px 0px 45px 0px
-}
 
-.statut_nuxt__footer-bottom-text{color: rgba(28, 41, 77, 0.5);}
+
+
 
 h4{
     color: rgba(28, 41, 77, 1);
@@ -225,9 +193,6 @@ h4{
     font-family: 500;
 }
 
-.statut_nuxt__footer-a{
-    color: rgba(28, 41, 77, 0.8);
-}
 
 a{
     font-weight: 400;
@@ -236,55 +201,28 @@ a{
     text-decoration: none;
 }
 
-.statut_nuxt__footer-contact-mail{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
-.statut_nuxt__footer-bottom{
-    display: flex;
-    align-items: center;
-}
 
-.statut_nuxt__footer-bottom-adress,
-.statut_nuxt__footer-bottom-policy,
-.statut_nuxt__footer-bottom-offer{
-    font-size:14px;
-    font-weight: 400;
-}
 
-.statut_nuxt__footer-bottom-text{
-    margin-right: 208px;
-}
+
+
 
 
 
 @media(max-width: 767px){
+    
+
     .statut_nuxt__footer-flex{
         flex-direction: column;
         gap: 0;
     }
-    
-    .statut_nuxt__footer-contact-title{
-        display: none;
+    .statut_nuxt__footer-bottom-mail-block{
+        display: block;
+        border-bottom: 1px solid rgba(42, 61, 72, 0.15);
+        padding: 20px 0px;
     }
-.statut_nuxt__footer-contact-mail{
-    border-bottom: 1px solid rgba(42, 61, 72, 0.15);
-    padding: 20px 0px;
-    
-}
 
-
-.statut_nuxt__footer-contact-flex{
-    display: block;
-}
-
-.statut_nuxt__footer-contact{
-    width: 100%;
-    display: block;
-}
-    
+  
     .statut_nuxt__footer-item{
        
         overflow: hidden;
@@ -305,18 +243,9 @@ a{
         justify-content: space-between;
         
     }
-
-    .statut_nuxt__footer-item-margin{
-        
-    }
-
+  
     img{
         display: block;
-    }
-
-    li{
-        
-
     }
 
     .statut_nuxt__footer-item-image{
@@ -324,6 +253,9 @@ a{
         width: 20px;
         height: 20px;
     }
+
+
+   
 }
 
 </style>
