@@ -5,8 +5,6 @@ export default defineComponent({
   
   
     setup(){
-
-
         const toggleHeight = (id) => {
             const element = document.getElementById(id);
             if(element.style.height === '60px' ||  element.style.height === ''){
@@ -16,8 +14,7 @@ export default defineComponent({
             }
         }
 
-
-
+           
         const footer = [
             {
                 id: 1,
@@ -86,15 +83,16 @@ export default defineComponent({
                 title: 'Прайс-лист',
                 linksa: [
                     {
-                        type: 'Наша почта',
+                        type: '',
+                        image: '/public/image/image (140).png',
                         href: '#'
                     },
                     {
-                        payment: 'Оплата и доставка',
+                        payment: 'Скачайть прайс-лист',
                         href: '#'
                     },
                     {
-                        question: 'Вопросы и ответы',
+                        question: 'PDF, 12 Mb',
                         href: '#'
                     }
                 ]
@@ -104,6 +102,7 @@ export default defineComponent({
         return {
             footer,  
             toggleHeight,
+            heights
             
         }
     }
@@ -114,6 +113,7 @@ export default defineComponent({
     <div class="statut_nuxt__footer">
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__footer-flex">
+                <div class="statut_nuxt__footer-flex-1">
                 <div v-for="links in footer" :key="links" :id="links.id" :title="links.title"  :linksa="links.linksa" class="statut_nuxt__footer-item">
                     <div @click="toggleHeight(links.id)"  class="statut_nuxt__footer-item-flex">
                         <h4>{{ links.title }}</h4>
@@ -121,15 +121,16 @@ export default defineComponent({
                     </div>
                     <ul class="statut_nuxt__footer-item-margin">
                         <li v-for="link in links.linksa" :key="link" :type="link.type" :href="link.href" :payment="link.payment" :question="link.question" :author="link.author">
-                            <a :href="link.href">{{ link.type }}</a>
-                            <a :href="link.href">{{ link.payment }}</a>
-                            <a :href="link.href">{{ link.question }}</a>
-                            <a :href="link.href">{{ link.author }}</a>
+                            <a v-if="link.type" :href="link.href">{{ link.type }}</a>
+                            <a v-if="link.payment" :href="link.href">{{ link.payment }}</a>
+                            <a v-if="link.question" :href="link.href">{{ link.question }}</a>
+                            <a v-if="link.author" :href="link.href">{{ link.author }}</a>
+                            <img v-if="link.image" src="" alt="">
                         </li>
                      
                     </ul>
                 </div>
-              
+            </div>
                 
                <FooterMedium />
                
@@ -150,6 +151,14 @@ export default defineComponent({
     gap: 30px;
     padding: 45px 0px;
     border-bottom: 1px solid rgba(223, 224, 225, 1);
+}
+
+.statut_nuxt__footer-flex-1{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    
+    
 }
 
 .statut_nuxt__footer-item-margin{
@@ -210,11 +219,20 @@ a{
 
 
 @media(max-width: 767px){
-    
+    .statut_nuxt__container{
+        padding: 0;
+    }
 
     .statut_nuxt__footer-flex{
         flex-direction: column;
         gap: 0;
+        padding: 45px 0px 0px 0px;
+    }
+
+    .statut_nuxt__footer-flex-1{
+        display: block;
+        width: 100%;
+        padding: 0px 20px;
     }
     .statut_nuxt__footer-bottom-mail-block{
         display: block;
@@ -226,11 +244,16 @@ a{
     .statut_nuxt__footer-item{
        
         overflow: hidden;
-        height: 60px;
+        height: 70px;
         padding: 20px 0px;
         transition: height 0.5s;
         border-bottom: 1px solid rgba(42, 61, 72, 0.15);
         width: 100%;
+        max-width: 60px;
+    }
+
+    .statut_nuxt__footer-item:last-child{
+        border: none;
     }
 
     .statut_nuxt__footer-item-image{
