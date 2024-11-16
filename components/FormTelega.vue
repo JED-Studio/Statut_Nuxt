@@ -15,12 +15,11 @@ export default defineComponent({
 <template>
     <form class="kanspark__form">
                 <div class="kanspark__input">
-                    <input type="text" placeholder="Автор, название, ISBN">
+                    <input type="text" placeholder="Введите свой Email и получите скидку">
                 </div>
 
                 <button class="kanspark__search-button">
-                    <img src="/assets/icons/Interface 52 - 24px.svg" alt="Поиск">
-                    <span>Искать</span>
+                    <img src="/assets/icons/Send r_15.svg" alt="Поиск">
                 </button>
             </form>
 </template>
@@ -36,7 +35,7 @@ export default defineComponent({
     border-radius: 5px;
     border: 1px solid rgba(223, 224, 225, 1);
     width: 100%;
-    max-width: 573px;
+    max-width: 443px;
     height: 40px;
     background-color: white;
 }
@@ -55,14 +54,10 @@ export default defineComponent({
     height: calc(100% + 2px);
     border-radius: 0px 5px 5px 0px;
     margin: -1px -2px -1px 0;
-    width: 123px;
+    width: 50px;
 }
 
-span{
-    font-size: 14px;
-    font-weight: 500;
-    color: white;  
-}
+
 
 input{
     width: 100%;

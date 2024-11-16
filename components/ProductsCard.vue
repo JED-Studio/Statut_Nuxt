@@ -21,7 +21,9 @@ export default defineComponent({
 <template>
     <div class="statut_nuxt__card-item" >
                     <div class="statut_nuxt__width">
-                    <img v-bind:src="image" alt="">
+                    <div class="statut_nuxt__width-img">
+                        <img v-bind:src="image" alt="">
+                    </div>
                     <div class="statut_nuxt__width-text">
                         <p class="statut_nuxt__width-title">{{ title }}</p>
                         <p class="statut_nuxt__width-description">{{ description }}</p>
@@ -68,8 +70,12 @@ export default defineComponent({
     
 }
 
+.statut_nuxt__width-img{
+    text-align: center;
+}
+
 .statut_nuxt__width-text{
-    
+    margin-top: 15px;
 }
 
 .statut_nuxt__width-title{

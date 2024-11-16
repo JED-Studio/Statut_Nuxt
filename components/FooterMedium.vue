@@ -84,8 +84,12 @@ h4{
     }
 .statut_nuxt__footer-contact-mail{
     border-bottom: 1px solid rgba(42, 61, 72, 0.15);
-    padding: 20px 0px;
+    padding: 20px 20px;
     
+}
+
+.statut_nuxt__footer-bottom-mail-block + .statut_nuxt__footer-contact-mail{
+    border-top: 1px solid rgba(42, 61, 72, 0.15);
 }
 
 
@@ -102,7 +106,7 @@ h4{
     display: flex;
     gap: 5px;
     border-bottom: 1px solid rgba(42, 61, 72, 0.15);
-    padding: 20px 0px;
+    padding: 20px 20px;
 }
 
 .statut_nuxt__footer-bottom-adress{
@@ -113,7 +117,7 @@ h4{
 
 .statut_nuxt__footer-bottom-mail-info{
     display: block;
-    padding: 20px 0px;
+    padding: 20px 20px;
     color: rgba(28, 41, 77, 0.5);
     font-size: 14px;
     font-weight: 400;
@@ -128,5 +132,7 @@ h4{
         display: block;
     }
 }
+
+
 
 </style>

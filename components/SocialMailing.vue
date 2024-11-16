@@ -3,11 +3,11 @@
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__social-mailing-flex">
             <img src="/public/image/logo.png" alt="">
-            <Form />
+            <FormTelega />
                <div class="statut_nuxt__social">
-                   <img src="/assets/icons/icon7.svg" alt="">
-                   <img src="/assets/icons/icon8.svg" alt="">
-                   <img src="/assets/icons/icon9.svg" alt="">
+                   <img src="/assets/icons/Facebook.svg" alt="">
+                   <img src="/assets/icons/Instagram.svg" alt="">
+                   <img src="/assets/icons/Twitter.svg" alt="">
                </div>
             </div>
         </div>

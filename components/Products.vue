@@ -23,7 +23,7 @@ setup(){
             price: 4450,
             star: 4.9,
             recomend: 89,
-            image: new URL('/public/image/image (140).png', import.meta.url).href,
+            image: '/Statut_Nuxt/assets/public/image/image 142.png',
         },
         {
             id: 2,
@@ -33,7 +33,7 @@ setup(){
             price: 372,
             star: 4.9,
             recomend: 89,
-            image:'/public/image/image 140.png'
+            image: '/Statut_Nuxt/assets/public/image/imageRo.png',
         },
         {
             id: 3,
@@ -43,7 +43,7 @@ setup(){
             price: 984,
             star: 4.9,
             recomend: 89,
-            image:'/public/image/image 140.png'
+            image: '/Statut_Nuxt/assets/public/image/image145.png',
         },
         {
             id: 4,
@@ -53,7 +53,7 @@ setup(){
             price: '450',
             star: 4.9,
             recomend: 89,
-            image:'/public/image/image 140.png'
+            image: '/Statut_Nuxt/assets/public/image/image 142.png',
         },
         {
             id: 5,
@@ -63,7 +63,7 @@ setup(){
             price: '450',
             star: 4.9,
             recomend: 89,
-            image:'/public/image/image 140.png'
+            image: '/Statut_Nuxt/assets/public/image/image 142.png',
         },
         {
             id: 6,
@@ -73,7 +73,7 @@ setup(){
             price: '450',
             star: 4.9,
             recomend: 89,
-            image:'/public/image/image 140.png'
+            image: '/Statut_Nuxt/assets/public/image/image 142.png',
         },
         
 
@@ -107,6 +107,7 @@ return {
                 <ProductsCard 
                 v-for="item in items" 
                 :key="item" 
+                :id="item.id"
                 :title="item.title" 
                 :description="item.description" 
                 :author="item.author"
