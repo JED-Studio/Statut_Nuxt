@@ -14,7 +14,7 @@ setup(){
 
 
 
-    const items = ref([
+    const items = [
         {
             id: 1,
             title: 'Корпоративное право',
@@ -24,6 +24,9 @@ setup(){
             star: 4.9,
             recomend: 89,
             image: '/Statut_Nuxt/assets/public/image/image 142.png',
+            bestseller: 'Бестселлер',
+            stocks: 'В наличии',
+            discount: 'Скидка 10%'
         },
         {
             id: 2,
@@ -77,7 +80,7 @@ setup(){
         },
         
 
-])
+]
 
 
 return {
@@ -95,10 +98,7 @@ return {
             <div class="statut_nuxt__goods">
              <div class="statut_nuxt__receipts">
                 <span class="statut_nuxt__receipts-text">Новые поступления</span>
-                <div class="statut_nuxt__switching">
-                    <div class="statut_nuxt__left"><img src="/assets/icons/Chevron Right 1 - 24px.svg" alt=""></div>
-                    <div class="statut_nuxt__right"><img class="statut_nuxt__right-img" src="/assets/icons/Chevron Right 1 - 24px.svg" alt=""></div>
-                </div>
+                <ButtonLeftRight />
              </div>
 
              <div class="statut_nuxt__card">
@@ -115,6 +115,9 @@ return {
                 :star="item.star"
                 :recomend="item.recomend"
                 :image="item.image"
+                :bestseller="item.bestseller"
+                :stocks="item.stocks"
+                :discount="item.discount"
                 />
                
 
@@ -132,7 +135,7 @@ return {
     </section>
 </template>
 
-<style>
+<style scoped>
 .statut_nuxt__products{
     background-color: rgba(249, 249, 250, 1);
     padding-bottom: 30px;
@@ -144,12 +147,11 @@ return {
 }
 
 .statut_nuxt__receipts{
-    margin: 0px 25px;
-    padding: 15px 0px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    border-bottom: 1px solid rgba(28, 41, 77, 0.15);
 }
 
 .statut_nuxt__receipts-text{
@@ -158,35 +160,8 @@ return {
     color: rgba(28, 41, 77, 1);
 }
 
-.statut_nuxt__switching{
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid rgba(28, 41, 77, 0.15);
-    
-}
 
-.statut_nuxt__left{
-    border-right: 1px solid #dddfe4;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-
-
-}
-
-.statut_nuxt__right{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-   
-}
-
-.statut_nuxt__right-img{
-    transform: rotate(180deg);
-}
 .statut_nuxt__card{
-    width: 100%;
     display: flex;
     overflow-x: auto;
 }
@@ -200,6 +175,7 @@ return {
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
+    border-top: 1px solid rgba(28, 41, 77, 0.15);
 }
 
 .statut_nuxt__all-sections-text{
@@ -208,49 +184,4 @@ return {
     color: rgba(28, 41, 77, 1);
 }
 
-
-
-
-.statut_nuxt__width{
-    width: 223px;
-    
-}
-
-.statut_nuxt__evaluations{
-    display: flex;
-    gap: 10px;
-}
-
-.statut_nuxt__star{
-    display: flex;
-    border-radius: 5px;
-    background-color: #fff1e4;
-    padding: 5px 8px;
-}
-
-.statut_nuxt__recomend{
-    display: flex;
-    background-color: #dee0ea;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-.statut_nuxt__buttons-item{
-    display: flex;
-    gap: 10px;
-}
-
-.statut_nuxt__basket{
-    display: flex;
-    padding: 10px 25px;
-    border-radius: 5px;
-    border: 2px solid #eeeeee;
-}
-
-.statut_nuxt__selected{
-    display: flex;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 2px solid #eeeeee;
-}
 </style>

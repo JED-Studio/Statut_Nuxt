@@ -6,6 +6,7 @@
        <Mailing />
        <Products />
        <Profit />
+       <News />
        <SocialMailing />
        <Footer />
    </div>

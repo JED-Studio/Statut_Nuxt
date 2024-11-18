@@ -2,7 +2,26 @@
       <section class="statut_nuxt__stocks">
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__grid">
-                <div class="statut_nuxt__stock-slider"></div>
+                <div class="statut_nuxt__stock-slider">
+                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+
+                    
+                    <div class="statut_nuxt__stock-slider-button">
+                       <div class="statut_nuxt__stock-slider-left">g</div>
+                       <div class="statut_nuxt__stock-slider-right">l</div>
+                    </div>
+                    <div class="statut_nuxt__stock-slider-pols">
+                       <div class="statut_nuxt__stock-pol"></div>
+                       <div class="statut_nuxt__stock-pol"></div>
+                       <div class="statut_nuxt__stock-pol"></div>
+                       <div class="statut_nuxt__stock-pol"></div>
+                    </div>
+                </div>
                 
 
 
@@ -49,8 +68,16 @@
 
                 </div>
 
-<div class="statut_nuxt__stock-rectangle"></div>
-                <div class="statut_nuxt__stock-rectangle-2"></div>
+                <div class="statut_nuxt__stock-rectangle">
+                    <p class="statut_nuxt__stock-rectangle-text">Бесплатно доставим
+                        ваш заказ при
+                        покупке от 2000 ₽</p>
+                    <img src="/public/image/TDV.png" alt="">
+                </div>
+                <div class="statut_nuxt__stock-rectangle-2">
+                    <p class="statut_nuxt__stock-rectangle-title">Скидка при регистрации до 15%</p>
+                    <img src="/public/image/illustration2.png" alt="">
+                </div>
 
             </div>
         </div>
@@ -59,15 +86,54 @@
 </template>
 
 <style>
+.statut_nuxt__stock-slider{
+    display: flex;
+    overflow-x:auto;
+    width: 750px;
+    height: 350px;
+    
+}
+
+.statut_nuxt__stock-slider-button{
+    position: absolute;
+}
+
+.gud{
+    min-width: calc(750px / 1);
+}
+
+
+.statut_nuxt__stock-slider::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+.statut_nuxt__stock-rectangle-text{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Gosha Sans', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    line-height: 25px; 
+}
+
+.statut_nuxt__stock-rectangle-title{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Gosha Sans', sans-serif;
+    color: rgba(28, 41, 77, 1);
+    line-height: 25px; 
+}
+
+
 .statut_nuxt__stocks{
     padding: 30px 0px;
     background-color: rgba(249, 249, 250, 1);
 }
 
 .statut_nuxt__stock-slider{
-    width: 100%;
-    max-width: 750px;
-    height: 350px;
+    
     background-color: greenyellow;
     grid-column: 1 / 3;
     border-radius: 5px;
@@ -84,20 +150,26 @@
 
 
 .statut_nuxt__stock-rectangle{
+    display: flex;
     grid-column: 1 / 2;
     width: 100%;
+    padding: 20px 25px;
+    align-items: center;
     max-width: 360px;
     height: 140px;
-    background-color: rgb(73, 1, 70);
+    background-color: rgba(109, 55, 143, 1);
     border-radius: 5px;
 }
 
 .statut_nuxt__stock-rectangle-2{
+    display: flex;
     grid-column: 2 / 3;
     width: 100%;
     max-width: 360px;
+    align-items: center;
+    padding: 20px 25px;
     height: 140px;
-    background-color: rgb(73, 1, 70);
+    background-color: rgba(255, 216, 239, 1);
     border-radius: 5px;
 }
 

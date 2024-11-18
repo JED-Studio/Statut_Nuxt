@@ -102,7 +102,6 @@ export default defineComponent({
         return {
             footer,  
             toggleHeight,
-            heights
             
         }
     }
@@ -244,12 +243,12 @@ a{
     .statut_nuxt__footer-item{
        
         overflow: hidden;
-        height: 70px;
+        height: 60px;
         padding: 20px 0px;
         transition: height 0.5s;
         border-bottom: 1px solid rgba(42, 61, 72, 0.15);
         width: 100%;
-        max-width: 60px;
+    
     }
 
     .statut_nuxt__footer-item:last-child{

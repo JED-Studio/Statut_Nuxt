@@ -25,4 +25,9 @@
     align-items: center;
     padding: 25px 0px;
 }
+
+.statut_nuxt__social{
+    display: flex;
+    gap: 15px;
+}
 </style>

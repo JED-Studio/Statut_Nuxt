@@ -11,7 +11,10 @@ export default defineComponent({
             price: Number,
             star: Number,
             recomend: Number,
-            image: String
+            image: String,
+            bestseller: String,
+            stocks: String,
+            discount: String
     }
 })
 
@@ -22,7 +25,11 @@ export default defineComponent({
     <div class="statut_nuxt__card-item" >
                     <div class="statut_nuxt__width">
                     <div class="statut_nuxt__width-img">
+                        <div class="statut_nuxt__width-bestseller">{{ bestseller }}</div>
+                        <div class="statut_nuxt__width-stocks">{{ stocks }}</div>
+                        <div class="statut_nuxt__width-discount">{{ discount }}</div>
                         <img v-bind:src="image" alt="">
+
                     </div>
                     <div class="statut_nuxt__width-text">
                         <p class="statut_nuxt__width-title">{{ title }}</p>
@@ -47,16 +54,57 @@ export default defineComponent({
                 </div>
 </template>
 
-<style>
+<style scoped>
+
+.statut_nuxt__width-bestseller{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 5px;
+    background-color: rgba(238, 233, 247, 1);
+    border-radius: 5px;
+    color: rgba(172, 142, 227, 1);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.statut_nuxt__width-stocks{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 5px;
+    background-color: rgba(255, 238, 238, 1);
+    border-radius: 5px;
+    color: rgba(255, 79, 82, 1);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.statut_nuxt__width-discount{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 5px;
+    background-color: rgba(255, 238, 238, 1);
+    border-radius: 5px;
+    color: rgba(255, 79, 82, 1);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
 .statut_nuxt__card-item{
     padding: 20px 34px 21px 34px;
-  
-    width: 100%;
+    min-width: calc(1168px / 4);
 }
 
 .statut_nuxt__card-item:nth-child(n+1){
-    border-top: 1px solid rgba(28, 41, 77, 0.15);
-    border-bottom: 1px solid rgba(28, 41, 77, 0.15);
     border-left: 1px solid rgba(28, 41, 77, 0.15);
 }
 
@@ -66,12 +114,13 @@ export default defineComponent({
 
 
 .statut_nuxt__width{
-    width: 223px;
+    
     
 }
 
 .statut_nuxt__width-img{
     text-align: center;
+    position: relative;
 }
 
 .statut_nuxt__width-text{
