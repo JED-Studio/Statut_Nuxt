@@ -156,17 +156,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .statut_nuxt__stock-item{
     padding: 20px 20px 26px 20px;
     background-color: white;
@@ -174,11 +163,6 @@
     max-width: 360px;
     height: 520px;
     border-radius: 5px;
-}
-
-.statut_nuxt__stock-width{
-
-    
 }
 
 .statut_nuxt__stock-width-day{
@@ -239,9 +223,6 @@
     line-height: 20px;
     margin-bottom: 12px;
 }
-
-
-
 
 
 .statut_nuxt__evaluations{

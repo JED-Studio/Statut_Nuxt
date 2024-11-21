@@ -140,11 +140,6 @@ del::before{
 }
 
 
-.statut_nuxt__width{
-    
-    
-}
-
 .statut_nuxt__width-img{
     text-align: center;
     position: relative;

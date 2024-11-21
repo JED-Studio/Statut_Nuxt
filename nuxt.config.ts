@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '~/components/blockStocks',    
     '~/components/blockNews',    
     '~/components/products',
-        
+
   ],
   modules: ['@nuxt/fonts'],
   fonts: {
@@ -31,6 +31,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/Statut_Nuxt', 
     buildAssetsDir: 'assets', 
-  }
+  },
+
   
 })

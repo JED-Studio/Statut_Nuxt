@@ -4,7 +4,6 @@ import { defineComponent } from 'vue'
 export default defineComponent({
 
     props: {
-        
             title: String,
             description: String,
             author: String,
@@ -49,10 +48,6 @@ export default defineComponent({
 }
 
 
-.statut_nuxt__news{
-
-    
-}
 
 .statut_nuxt__news-img{
     width: 100%;

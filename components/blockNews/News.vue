@@ -1,7 +1,8 @@
 <script>
 
-import { defineComponent, ref } from 'vue' 
-import NewsCard from './NewsCard.vue';
+import { defineComponent} from 'vue' 
+import NewsCard from '../NewsCard.vue';
+import { news } from '../composables/utils/news.js'
 
 export default defineComponent({
     
@@ -10,50 +11,9 @@ export default defineComponent({
     },
 
 setup(){
-    
-    const news = ref([
-        {
-            id: 1,
-            title: '16 июня 2020',
-            description: 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...',
-            author: '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...',
-            image: '/Statut_Nuxt/assets/public/image/Mask Group.png',
-        },
-        {
-            id: 2,
-            title: '16 июня 2020',
-            description: 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...',
-            author: '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...',
-            image: '/Statut_Nuxt/assets/public/image/Rectangle 932.png',
-        },
-        {
-            id: 3,
-            title: '16 июня 2020',
-            description: 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...',
-            author: '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...',
-            image: '/Statut_Nuxt/assets/public/image/Rectangle 933.png',
-        },
-        {
-            id: 4,
-            title: '16 июня 2020',
-            description: 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...',
-            author: '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...',
-            image: '/Statut_Nuxt/assets/public/image/Rectangle 933.png',
-        },
-        {
-            id: 5,
-            title: '16 июня 2020',
-            description: 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...',
-            author: '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...',
-            image: '/Statut_Nuxt/assets/public/image/Rectangle 933.png',
-        },
-
-
-])
-
 
 return {
-    news
+    news: news
 }
 
 }
