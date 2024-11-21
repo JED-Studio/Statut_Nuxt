@@ -1,7 +1,7 @@
 <script>
 
 import { defineComponent, ref } from 'vue' 
-import ProductsCard from './ProductsCard.vue';
+import ProductsCard from '../products/ProductsCard.vue';
 
 export default defineComponent({
     
@@ -23,10 +23,9 @@ setup(){
             price: 4450,
             star: 4.9,
             recomend: 89,
-            image: '/Statut_Nuxt/assets/public/image/image 142.png',
+            image: '@/assets/public/image/image 142.png',
             bestseller: 'Бестселлер',
-            stocks: 'В наличии',
-            discount: 'Скидка 10%'
+            discount: '1+1=3'
         },
         {
             id: 2,
@@ -36,7 +35,8 @@ setup(){
             price: 372,
             star: 4.9,
             recomend: 89,
-            image: '/Statut_Nuxt/assets/public/image/imageRo.png',
+            stocks: 'Новинка',
+            image: '@/assets/public/image/imageRo.png',
         },
         {
             id: 3,
@@ -46,7 +46,9 @@ setup(){
             price: 984,
             star: 4.9,
             recomend: 89,
-            image: '/Statut_Nuxt/assets/public/image/image145.png',
+            image: '/assets/assets/public/image/image145.png',
+            oldprice: '1 200',
+            pricediscount: '1 200'
         },
         {
             id: 4,
@@ -56,7 +58,7 @@ setup(){
             price: '450',
             star: 4.9,
             recomend: 89,
-            image: '/Statut_Nuxt/assets/public/image/image 142.png',
+            image: 'assets/assets/public/image/image 142.png',
         },
         {
             id: 5,
@@ -66,7 +68,7 @@ setup(){
             price: '450',
             star: 4.9,
             recomend: 89,
-            image: '/Statut_Nuxt/assets/public/image/image 142.png',
+            image: '@/assets/assets/public/image/image 142.png',
         },
         {
             id: 6,
@@ -76,7 +78,7 @@ setup(){
             price: '450',
             star: 4.9,
             recomend: 89,
-            image: '/Statut_Nuxt/assets/public/image/image 142.png',
+            image: 'Statut_Nuxt/assets/assets/public/image/image 142.png',
         },
         
 
@@ -118,6 +120,8 @@ return {
                 :bestseller="item.bestseller"
                 :stocks="item.stocks"
                 :discount="item.discount"
+                :oldprice="item.oldprice"
+                :pricediscount="item.pricediscount"
                 />
                
 

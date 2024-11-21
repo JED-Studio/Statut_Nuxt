@@ -8,7 +8,16 @@ export default defineNuxtConfig({
   ],
   components: [
     '~/components',
-    '~/components/ui-kit'      
+    '~/components/ui-kit',    
+    '~/components/header',      
+    '~/components/footer',      
+    '~/components/form',      
+    '~/components/slider',      
+    '~/components/button',  
+    '~/components/blockStocks',    
+    '~/components/blockNews',    
+    '~/components/products',
+        
   ],
   modules: ['@nuxt/fonts'],
   fonts: {

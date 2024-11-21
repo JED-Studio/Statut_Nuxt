@@ -41,11 +41,23 @@
     font-size: 18px;
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 1;
 }
 
-.statut_nuxt__mailing-price{font-weight: 700;}
+.statut_nuxt__mailing-price{
+    font-weight: 700;
+    position: relative;
 
+}
 
+.statut_nuxt__mailing-price::after{
+    content: url('/public/image/Vector 163.png');
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    left: -10px;
+}
 .statut_nuxt__mailing-input{
     margin-right: 10px;
 }
@@ -55,20 +67,30 @@ input{
     width: 418px;
     border-radius: 5px;
     border: none;
+    outline: none;
+    padding-left: 20px;
 }
+
 
 .statut_nuxt__mailing-button{
     padding: 10px 25px;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 5px;
     width: 137px;
-    
+    color: rgba(255, 255, 255, 1);
+    transition:background-color 0.2s linear,color 0.2s linear, fill 0.2s linear;
+    cursor: pointer;
+}
+
+.statut_nuxt__mailing-button:hover{
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
 }
 
 .statut_nuxt__mailing-button-text{
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+   
 }
 
 @media(max-width: 768px){

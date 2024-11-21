@@ -14,7 +14,9 @@ export default defineComponent({
             image: String,
             bestseller: String,
             stocks: String,
-            discount: String
+            discount: String,
+            oldprice: Number,
+            pricediscount: Number
     }
 })
 
@@ -25,36 +27,61 @@ export default defineComponent({
     <div class="statut_nuxt__card-item" >
                     <div class="statut_nuxt__width">
                     <div class="statut_nuxt__width-img">
-                        <div class="statut_nuxt__width-bestseller">{{ bestseller }}</div>
-                        <div class="statut_nuxt__width-stocks">{{ stocks }}</div>
-                        <div class="statut_nuxt__width-discount">{{ discount }}</div>
+                        <div v-if="bestseller" class="statut_nuxt__width-bestseller">{{ bestseller }}</div>
+                        <div v-if="stocks" class="statut_nuxt__width-stocks">{{ stocks }}</div>
+                        <div v-if="discount" class="statut_nuxt__width-discount">{{ discount }}</div>
                         <img v-bind:src="image" alt="">
-
                     </div>
                     <div class="statut_nuxt__width-text">
                         <p class="statut_nuxt__width-title">{{ title }}</p>
                         <p class="statut_nuxt__width-description">{{ description }}</p>
                         <p class="statut_nuxt__width-author">{{ author }}</p>
+                        <div class="statut_nuxt__width-prices">
                         <p class="statut_nuxt__width-price">{{ price }} ₽</p>
+                        <p v-if="oldprice" class="statut_nuxt__width-old-price"><del>{{ oldprice }} ₽</del></p>
+                        <p v-if="pricediscount" class="statut_nuxt__width-price-discount"> {{ pricediscount }} ₽</p>
+                        </div>
                     </div>
                     <div class="statut_nuxt__evaluations">
                         <div class="statut_nuxt__star"> <img src="/assets/icons/Star 2.svg" alt="">{{ star }}</div>
                         <div class="statut_nuxt__recomend"> <img src="/assets/icons/Interface.svg" alt=""> {{ recomend }}% рекомендуют</div>
                     </div>
                     <div class="statut_nuxt__buttons-item">
-                        <div class="statut_nuxt__basket">
-                            <img src="/assets/icons/icon 1 - 24px.svg" alt="">
-                            <p class="statut_nuxt__basket-text">В корзина</p>
-                        </div>
-                        <div class="statut_nuxt__selected">
-                            <img src="/assets/icons/icon7.svg" alt="">
-                        </div>
+                        <ButtonBasket />
+                        <ButtonFavorite />
+                       
                     </div>
                   </div>
                 </div>
 </template>
 
 <style scoped>
+del{
+    
+	position: relative;
+	
+	text-decoration: none;
+}
+del::before{
+    content: "";
+	border-bottom: 1px solid red;
+	position: absolute;
+	width: 100%;
+	height: 56%;
+	transform: rotate(-5deg);
+}
+
+.statut_nuxt__width-old-price{
+    color: rgba(28, 41, 77, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.statut_nuxt__width-price-discount{
+    color: rgba(13, 185, 140, 1);
+    font-weight: 400;
+    font-size: 12px;
+}
 
 .statut_nuxt__width-bestseller{
     position: absolute;
@@ -73,16 +100,16 @@ export default defineComponent({
     top: 0px;
     left: 0px;
     padding: 5px;
-    background-color: rgba(255, 238, 238, 1);
+    background-color: rgba(226, 246, 236, 1);
     border-radius: 5px;
-    color: rgba(255, 79, 82, 1);
+    color: rgba(61, 196, 126, 1);
     font-size: 12px;
     font-weight: 500;
 }
 
 .statut_nuxt__width-discount{
     position: absolute;
-    top: 0px;
+    top: 34px;
     left: 0px;
     padding: 5px;
     background-color: rgba(255, 238, 238, 1);
@@ -156,10 +183,14 @@ export default defineComponent({
     font-weight: 700;
     color: rgba(28, 41, 77, 1);
     line-height: 20px;
-    margin-bottom: 10px;
 }
 
-
+.statut_nuxt__width-prices{
+    display: flex;
+    gap: 7px;
+    margin-bottom: 10px;
+    align-items: self-end;
+}
 
 
 
@@ -195,28 +226,27 @@ export default defineComponent({
 
 .statut_nuxt__buttons-item{
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
-.statut_nuxt__basket{
-    display: flex;
-    padding: 10px 25px;
-    border-radius: 5px;
-    border: 2px solid #eeeeee;
-    align-items: center;
-    gap: 10px;
-}
 
-.statut_nuxt__basket-text{
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(28, 41, 77, 1);
-}
+@media(max-width: 768px){   
+    
+    .statut_nuxt__card-item{
+        padding: 20px 10px;
+        min-width: calc(375px / 2);
+    }
+    
+    .statut_nuxt__evaluations{
+        display: block;
+    }
 
-.statut_nuxt__selected{
-    display: flex;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 2px solid #eeeeee;
+    .statut_nuxt__star{
+        width: 52px;
+        margin-bottom: 8px;
+    }
+    .statut_nuxt__recomend{
+        width: 144px;
+    }
 }
 </style>

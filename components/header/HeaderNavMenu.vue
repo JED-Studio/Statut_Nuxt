@@ -3,7 +3,7 @@
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__flex3">
                 <div class="statut_nuxt__catalog">
-                    <img src="/assets/icons/icon10.svg" alt="">
+                    <img src="/assets/icons/Interface 85 - 24px.svg" alt="">
                     <a href="">Каталог</a>
                 </div>
                 <a href="">Авторы</a>

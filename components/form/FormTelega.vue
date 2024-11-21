@@ -76,10 +76,5 @@ input::placeholder {
     letter-spacing: 5%;
   }
 
-@media(max-width: 767px){
-    .kanspark__search-button{
-        display: none;
-    }
 
-}
 </style>

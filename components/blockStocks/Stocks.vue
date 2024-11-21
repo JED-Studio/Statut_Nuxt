@@ -2,26 +2,8 @@
       <section class="statut_nuxt__stocks">
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__grid">
-                <div class="statut_nuxt__stock-slider">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-
-                    
-                    <div class="statut_nuxt__stock-slider-button">
-                       <div class="statut_nuxt__stock-slider-left">g</div>
-                       <div class="statut_nuxt__stock-slider-right">l</div>
-                    </div>
-                    <div class="statut_nuxt__stock-slider-pols">
-                       <div class="statut_nuxt__stock-pol"></div>
-                       <div class="statut_nuxt__stock-pol"></div>
-                       <div class="statut_nuxt__stock-pol"></div>
-                       <div class="statut_nuxt__stock-pol"></div>
-                    </div>
-                </div>
+           
+                <Slider />
                 
 
 
@@ -75,7 +57,7 @@
                     <img src="/public/image/TDV.png" alt="">
                 </div>
                 <div class="statut_nuxt__stock-rectangle-2">
-                    <p class="statut_nuxt__stock-rectangle-title">Скидка при регистрации до 15%</p>
+                    <p class="statut_nuxt__stock-rectangle-title">Скидка при регистрации до <span class="statut_nuxt__stock-rectangle-title-span">15%</span></p>
                     <img src="/public/image/illustration2.png" alt="">
                 </div>
 
@@ -86,28 +68,25 @@
 </template>
 
 <style>
-.statut_nuxt__stock-slider{
-    display: flex;
-    overflow-x:auto;
-    width: 750px;
-    height: 350px;
-    
+.statut_nuxt__stock-rectangle-title-span{
+    position: relative;
 }
 
-.statut_nuxt__stock-slider-button{
+.statut_nuxt__stock-rectangle-title-span::after{
+    content: url('/public/image/Vector 162.png');
     position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -12px;
 }
 
-.gud{
-    min-width: calc(750px / 1);
+.statut_nuxt__stock-rectangle-text::after{
+    content: url('/public/image/Vector 161.png');
+    position: absolute;
+    top: 0px;
+    left: -11px;
+    z-index: -1;
 }
-
-
-.statut_nuxt__stock-slider::-webkit-scrollbar{
-    display: none;
-}
-
-
 
 
 .statut_nuxt__stock-rectangle-text{
@@ -116,6 +95,8 @@
     font-family: 'Gosha Sans', sans-serif;
     color: rgba(255, 255, 255, 1);
     line-height: 25px; 
+    position: relative;
+    z-index: 4;
 }
 
 .statut_nuxt__stock-rectangle-title{
@@ -124,7 +105,10 @@
     font-family: 'Gosha Sans', sans-serif;
     color: rgba(28, 41, 77, 1);
     line-height: 25px; 
+    z-index: 4;
+    position: relative;
 }
+
 
 
 .statut_nuxt__stocks{
@@ -132,18 +116,12 @@
     background-color: rgba(249, 249, 250, 1);
 }
 
-.statut_nuxt__stock-slider{
-    
-    background-color: greenyellow;
-    grid-column: 1 / 3;
-    border-radius: 5px;
-}
 
 .statut_nuxt__grid{
     gap: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 350px 140px;
+   
 }
 
 
@@ -156,7 +134,7 @@
     padding: 20px 25px;
     align-items: center;
     max-width: 360px;
-    height: 140px;
+    
     background-color: rgba(109, 55, 143, 1);
     border-radius: 5px;
 }
@@ -168,15 +146,13 @@
     max-width: 360px;
     align-items: center;
     padding: 20px 25px;
-    height: 140px;
     background-color: rgba(255, 216, 239, 1);
     border-radius: 5px;
 }
 
 .statut_nuxt__stock-card{
-    grid-row-start: 1;
-    grid-column-start: 3;
-    
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
 }
 
 

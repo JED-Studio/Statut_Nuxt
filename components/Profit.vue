@@ -87,6 +87,10 @@ p{
 
 @media (max-width: 768px){
     .statut_nuxt__profit-block{display: block;}
-    .statut_nuxt__profit-item{margin-bottom: 10px;}
+    .statut_nuxt__profit-item{
+        margin-bottom: 10px;
+        height: 170px;
+    }
+    .statut_nuxt__profit-item:last-child{margin-bottom: 0;}
 }
 </style>

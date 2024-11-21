@@ -98,7 +98,9 @@ export default defineComponent({
     margin-bottom: 10px;
 }
 
-
+@media(max-width: 768px){
+   
+}
 
 
 

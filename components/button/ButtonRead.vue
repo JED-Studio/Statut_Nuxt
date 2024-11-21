@@ -14,4 +14,11 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+@media (max-width: 768px){
+    .statut_nuxt__button-read{
+        text-align: center;
+        width: 100%;
+    }
+}
 </style>

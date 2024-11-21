@@ -35,13 +35,17 @@
 .statut_nuxt__footer-bottom-flex{
     display: flex;
     align-items: center;
-    gap: 208px;
+    width: 100%;
+    max-width: 720px;
+    justify-content: space-between;
 }
 
 .statut_nuxt__footer-bottom-flex-1{
     display: flex;
     align-items: center;
-    gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 353px;
 }
 
 @media (max-width: 768px){

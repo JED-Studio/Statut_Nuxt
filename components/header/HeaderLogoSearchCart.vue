@@ -4,7 +4,7 @@
             <div class="statut_nuxt__flex2">
 
                 <div class="statut_nuxt__logo-search">
-                    <img class="statut_nuxt__sidebar" src="/assets/icons/icon10.svg" alt="">
+                    <img class="statut_nuxt__sidebar" src="/assets/icons/Interface 85 - 24px.svg" alt="">
                     
                         <img src="/public/image/logo.png" alt="">
                         
@@ -23,7 +23,7 @@
                     </div>
                     <div class="statut_nuxt__cart-item-basket">
                         <div class="statut_nuxt__cart-basket">
-                        <img src="/assets/icons/icon9.svg" alt="">
+                        <img class="statut_nuxt__cart-basket-img" src="/assets/icons/icon9.svg" alt="">
                         <div class="statut_nuxt__cart-item-num">10</div>
                         </div>
                         <a href="">Корзина</a>
@@ -120,6 +120,8 @@ a{
     .statut_nuxt__sidebar{display: block;}
 
     .statut_nuxt__cart-item{display: none;}
+
+    .statut_nuxt__cart-basket-img{width: 25px; height: 25px;}
 
     a{display: none;}
 
