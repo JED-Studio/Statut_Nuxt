@@ -24,7 +24,7 @@ export default defineComponent({
 
 
 <template>
-    <div class="statut_nuxt__card-item" >
+    <div class="statut_nuxt__card-item">
                     <div class="statut_nuxt__width">
                     <div class="statut_nuxt__width-img">
                         <div v-if="bestseller" class="statut_nuxt__width-bestseller">{{ bestseller }}</div>

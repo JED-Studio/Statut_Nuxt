@@ -1,27 +1,61 @@
+<script>
+import { defineComponent,ref } from 'vue'
+
+export default defineComponent({
+    
+    setup(){
+        const items = ref([
+            'image/Group 1014.png',
+            'image/Group 1014.png',
+            'image/Group 1014.png',
+            'image/Group 1014.png',
+            'image/Group 1014.png',
+        ])
+
+        const currentIndex = ref(0)
+
+        const prevSlide = () =>{
+            currentIndex.value = (currentIndex.value - 1 + items.value.length) % items.value.length;
+        }
+
+        const nextSlide = () =>{
+            currentIndex.value = (currentIndex.value + 1) % items.value.length;
+
+        }
+
+        const polos = (index) =>{
+            currentIndex.value = index
+        }
+
+        return{
+            items,
+            polos,
+            prevSlide,
+            nextSlide,
+            currentIndex,
+
+            
+        }
+    }
+})
+</script>
+
 <template>
      <div class="statut_nuxt__stock-slider">
-                    <div class="bot">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
-                    <img class="gud" src="/public/image/Group 1014.png" alt="">
+                <div class="statut_nuxt__stock-images" >
+                    <img v-for="(item, index) in items" :key="index" :src="item" class="images" :style="{ transform: `translateX(-${currentIndex * 100}%)` }" alt="">
                 </div>
                     <div class="statut_nuxt__stock-slider-button">
 
-                       <div class="statut_nuxt__stock-slider-left">
+                       <div class="statut_nuxt__stock-slider-left" @click="prevSlide">
                         <img class="statut_nuxt__stock-slider-img" src="/assets/icons/Chevron Right 1 - 24px.svg" alt="">
                     </div>
-                       <div class="statut_nuxt__stock-slider-right">
+                       <div class="statut_nuxt__stock-slider-right" @click="nextSlide">
                         <img class="statut_nuxt__stock-slider-img" src="/assets/icons/Chevron Right 1 - 24px.svg" alt="">
                     </div>
                     </div>
                     <div class="statut_nuxt__stock-slider-pols">
-                       <div class="statut_nuxt__stock-pol"></div>
-                       <div class="statut_nuxt__stock-pol"></div>
-                       <div class="statut_nuxt__stock-pol"></div>
-                       <div class="statut_nuxt__stock-pol"></div>
+                       <div v-for="(item, index) in items" :key="index" :item="item" class="statut_nuxt__stock-pol" @click ="polos(index)"  :class="{ active: currentIndex === index }"></div>
                     </div>
                 </div>
 </template>
@@ -54,25 +88,17 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 5px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.active{
+    background-color: black;
+}
 
 
 .statut_nuxt__stock-slider{
-    background-color: greenyellow;
+    overflow: hidden;
     grid-column: 1 / 3;
     border-radius: 5px;
 }
@@ -83,13 +109,13 @@
 }
 
 
-.bot{
+.statut_nuxt__stock-images{
     display: flex;
-    overflow-x:auto;
+    
     height: 100%;
 }
 
-.bot::-webkit-scrollbar{
+.statut_nuxt__stock-images::-webkit-scrollbar{
     display: none;
 }
 
@@ -106,8 +132,9 @@
 
 }
 
-.gud{
+.images{
     width: 100%;
+    transition: 0.2s all;
 }
 
 .statut_nuxt__stock-slider-left{

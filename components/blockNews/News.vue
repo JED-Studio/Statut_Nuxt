@@ -1,7 +1,7 @@
 <script>
 
 import { defineComponent} from 'vue' 
-import NewsCard from '../NewsCard.vue';
+import NewsCard from '../blockNews/NewsCard.vue';
 import { news } from '../composables/utils/news.js'
 
 export default defineComponent({

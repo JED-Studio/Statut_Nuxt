@@ -3,6 +3,8 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
     setup(){
+
+       
     }
 })
 </script>
@@ -12,8 +14,8 @@ export default defineComponent({
         <div class="statut_nuxt__container">
             <div class="statut_nuxt__footer-flex">
                 <div class="statut_nuxt__footer-flex-1">
-                <div class="statut_nuxt__footer-item">
-                    <div @click="toggleHeight"  class="statut_nuxt__footer-item-flex">
+                <div class="statut_nuxt__footer-item"  >
+                    <div class="statut_nuxt__footer-item-flex">
                         <h4>Покупателям</h4>
                         <img class="statut_nuxt__footer-item-image" src="@/assets/icons/Chevron Right 1 - 24px.svg" alt="">
                     </div>

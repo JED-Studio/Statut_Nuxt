@@ -8,6 +8,7 @@
 
 .statut_nuxt__selected{
     display: flex;
+    justify-content: center;
     padding: 10px 10px;
     border-radius: 5px;
     height: 40px;
@@ -19,7 +20,7 @@
     .statut_nuxt__selected{
         padding: 8px 7px;
         height: 35px;
-        height: 35px;
+        width: 35px;
     }
 }
 </style>

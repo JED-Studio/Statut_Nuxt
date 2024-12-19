@@ -56,9 +56,7 @@
     width: 100%;
 }
 
-.statut_nuxt__search{
 
-}
 
 .statut_nuxt__cart{
     display: flex;
@@ -108,9 +106,7 @@ a{
 
 
 @media (max-width: 768px) {
-    .statut_nuxt__cart{
-        
-    }
+   
 
     .statut_nuxt__logo-search-cart{
         padding: 15px 0px;
