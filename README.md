@@ -1,3 +1,15 @@
+## Статут
+
+https://jed-studio.github.io/Statut_Nuxt/
+
+
+
+
+![alt text](https://github.com/JED-Studio/Statut_Nuxt/blob/main/public/image/Nuxt.png)
+
+
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
